@@ -51,8 +51,11 @@
           <div class="content-wrap">
             <h5 class="mbr-card-title card-title1 mbr-fonts-style align-left mb-2 display-5"><strong>ModPack</strong></h5>
             
-            <p class="card-text1 mbr-fonts-style align-left mb-3 display-7">Tress Pack 1.21.4 (by_hotdorgs)<br>Versão 1.0<br><br>Para instalar o modpack, clique em "Import" ou "Importar" no Curse Forge, "Chosse .zip file" ou "Selecionar aquivo .zip" e depois, selecione o arquivo baixado, aguarde fazer o donwload de todos os mods e boa gameplay! :)</p>
-            <div class="mbr-section-btn align-left content-footer"><a class="btn article-btn btn-success display-7" href="https://drive.usercontent.google.com/uc?id=1NFWNMM0vH5WHDD9Tq1jqsVjFc2vXU4oF&export=download" target="_blank">Baixar<strong></strong></a></div>
+            <p class="card-text1 mbr-fonts-style align-left mb-3 display-7">Tress Pack 1.21.4 (by_hotdorgs)<br>Versão 1.0<br><br>Para instalar o modpack, clique em "Import" ou "Importar" no Curse Forge, clique em "Use Profile Code" e depois, copie o código abaixo e cole no Curse Forge, aguarde fazer o donwload de todos os mods e boa gameplay! :) (OBS: Caso o código tenha expirado, solicite um novo no discord disponível na primeira tela!)</p>
+            <div class="mbr-section-btn align-left content-footer">
+                <button class="btn article-btn btn-success display-7" onclick="copiarCodigo()">Copiar Código</button>
+                <span id="codigoModpack" style="display: none;">2ldcZ3ZG</span>
+            </div>
             <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="https://hotdorgs.github.io/Minecraft/">Voltar</a></div>
           </div>
         </div>
@@ -67,5 +70,16 @@
 </section>  
   
   <input name="animation" type="hidden">
+  <script>
+    function copiarCodigo() {
+        const codigo = document.getElementById('codigoModpack').textContent;
+        navigator.clipboard.writeText(codigo).then(() => {
+            alert('Código copiado com sucesso!');
+        }).catch(err => {
+            console.error('Erro ao copiar código:', err);
+            alert('Erro ao copiar código. Por favor, tente novamente.');
+        });
+    }
+  </script>
   </body>
 </html>
