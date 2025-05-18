@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hot dorgs Modpack Minecraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Hot Dorgs.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            background: url('33Sem título.png') center center/cover no-repeat fixed;
+            opacity: 0.25;
+        }
+        header {
+            background: url('b8790d45-7c31-47b6-ae21-41366ba16b79.jpg') center center/cover no-repeat;
+            background-color: rgba(24,24,24,0.70);
+            background-blend-mode: darken;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(24,24,24,0.55);
+            z-index: 0;
+            border-radius: inherit;
+        }
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+        .notificacao-copiado {
+            display: none;
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.95);
+            background: rgba(30,30,30,0.95);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            box-shadow: 0 4px 24px #0008;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .notificacao-copiado.ativo {
+            display: block;
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+        .btn-cafe {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 16px 38px;
+            background: linear-gradient(90deg, #e53935 60%, #23272a 100%);
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px #0006;
+            border: 3px solid #e53935;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+            letter-spacing: 1px;
+        }
+        .btn-cafe:hover {
+            background: #fff;
+            color: #e53935;
+            border: 3px solid #e53935;
+            box-shadow: 0 6px 32px #e5393555;
+        }
+        .btn-cafe .fa-coffee {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Hot Dorgs.png" alt="Logo hot dorgs" class="logo">
+        <h1>hot dorgs Modpack Minecraft</h1>
+        <p class="subtitulo">O modpack oficial para sua melhor experiência Minecraft.<br>Montado e mantido por <span class="destaque">@hot dorgs.</span></p>
+    </header>
+    <main>
+        <section class="sobre centralizado">
+            <h2>Sobre o Modpack</h2>
+            <p><span class="versao">Versão: 1.21.5 | Fabric</span></p>
+            <p><span class="destaque-vermelho">Mod principal: Distant Horizons</span> — Permite enxergar muito mais chunks do que o Minecraft padrão, revolucionando sua experiência de exploração!</p>
+            <p>O modpack também inclui <span class="destaque-vermelho">shaders</span> e outros mods visuais para gráficos incríveis, além de mods de jogabilidade focados em <span class="destaque-vermelho">survival</span> para deixar o jogo mais divertido, desafiador e imersivo.</p>
+            <p class="contribuicao">Contribuição e montagem: <b>hot dorgs</b></p>
+        </section>
+        <section class="instalacao centralizado">
+            <h2>Como instalar</h2>
+            <div class="videos-tutoriais">
+                <div class="video-bloco">
+                    <div class="badge-video badge-original">Minecraft Original</div>
+                    <div class="video-container video-grande">
+                        <iframe src="https://www.youtube.com/embed/b8Jc4wnl9-I?rel=0&amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="100%" height="420" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-bloco">
+                    <div class="badge-video badge-pirata">Minecraft Pirata</div>
+                    <div class="video-container video-grande">
+                        <iframe src="https://www.youtube.com/embed/Ej3dkMRF9MM?si=oWh1LnxirIxvtOsj&amp;start=140" width="100%" height="420" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-import">
+                <h3><span class="destaque-vermelho">Importando o Modpack no Curse Forge</span></h3>
+                <ol>
+                    <li><span class="destaque-vermelho">Clique em "Import"</span> ou <span class="destaque-vermelho">"Importar"</span> no Curse Forge.</li>
+                    <li><span class="destaque-vermelho">Clique em "Use Profile Code"</span>.</li>
+                    <li>Copie o código abaixo e cole no Curse Forge.</li>
+                    <li>Aguarde o download de todos os mods e boa gameplay! :)</li>
+                </ol>
+                <p class="obs">Caso o código tenha expirado, solicite um novo no Discord disponível abaixo.</p>
+                <div class="codigo-container">
+                    <input type="text" value="2ldcZ3ZG" id="codigoModpack" readonly>
+                    <button onclick="copiarCodigo()" id="btnCopiar">Copiar Código</button>
+                </div>
+            </div>
+        </section>
+        <section class="redes centralizado">
+            <h2>Contato & Redes</h2>
+            <div class="links-redes">
+                <a href="https://www.youtube.com/@hotdorgs" target="_blank" class="yt" title="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="https://discord.gg/Zj5gth2gnc" target="_blank" class="discord" title="Discord"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://instagram.com/cesar.kali" target="_blank" class="insta" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <a href="https://livepix.gg/hotdorgs" target="_blank" class="btn-cafe"><i class="fa fa-coffee"></i> Me pague um café ;)</a>
+        </section>
+    </main>
+    <footer>
+        <p>© Copyright 2025 hot dorgs - All Rights Reserved</p>
+    </footer>
+    <div id="notificacaoCopiado" class="notificacao-copiado">Código copiado com sucesso!</div>
+    <script>
+        function copiarCodigo() {
+            var copyText = document.getElementById("codigoModpack");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            var notificacao = document.getElementById("notificacaoCopiado");
+            notificacao.classList.add("ativo");
+            setTimeout(function() {
+                notificacao.classList.remove("ativo");
+            }, 1800);
+        }
+    </script>
+</body>
+</html> 
